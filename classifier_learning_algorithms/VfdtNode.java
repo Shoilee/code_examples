@@ -47,7 +47,7 @@ public class VfdtNode{
     	   }
        }
        //System.out.println("Number of feature"+ nijk.length+"; Number of value"+ nijk[0].length);
-       
+       //initializing nijk with zero
        for(int i=0; i<nijk.length; i++) {
     	   for(int j=0; j<nijk[i].length; j++) {
     		   for(int k=0; k<nijk[i][j].length; k++) {
@@ -126,10 +126,8 @@ public class VfdtNode{
 	
 	if(children==null) {
 		leaf=this;
-		//System.out.println("I am leaf");
 		return leaf;
 	}else {
-		//System.out.println("I am root");
 		int value= example[this.splitFeature];
 		leaf=children[value];
 		leaf=leaf.sortExample(example);
@@ -176,6 +174,7 @@ public class VfdtNode{
 		 
 		 int total= classCount[0]+classCount[1];
 		 return total;
+
  }
    
 
@@ -200,22 +199,19 @@ public class VfdtNode{
    
 
    /**
-      Split evaluation method (function G in the paper)
-      
+      Split evaluation method based on InformationGain
       Compute a splitting score for the feature featureId.
-      For now, we'll use information gain, but this may be changed.
-      You can test your code with other split evaluations, but be sure to change it 
-      back to information gain in the submitted code and for the experiments with default values.
       
       @param featureId is the feature to be considered. 
    */
 
    public double splitEval(int featureId){
-	return informationGain(featureId, nijk);
+		return informationGain(featureId, nijk);
    }
 
+
    /**
-      Compute the information gain of a feature for this leaf node. 
+      Computation of the information gain of a feature for this leaf node. 
       @param featureId is the feature to be considered. 
       @param nijk are the instance counts.
    */ 

@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 /**
 * This class is a stub for incrementally building a Logistic Regression model. 
 * This class can be used for learning weights for regression model, reading/writing model weigts from/to a file
-* Incremental update of the model is done by another class which is discarded to keep the originality of code
+* Incremental update of the model is done by another class "IncrementalLearner" which is discarded to keep the originality of code
 * Data instance "Example" class is not present here; has two property-- attributeValues & classValues
 */
 

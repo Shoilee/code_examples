@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 
 /**
-* This class is a stub for VFDT(Very Fast Decision Tree):a decision-tree learning system based on Hoeding trees learner
+* This class is a stub for VFDT(Very Fast Decision Tree):a decision-tree learning system based on Hoeffding trees learner
 * This class can be use for building the tree
-* Each Node of this tree is managed using VfdtNode class; see VfdtNode.txt
+* Each Node of this tree is managed using VfdtNode class; see VfdtNode.java
 * Incremental update of the model is done by another class which is discarded to keep the originality of code
 * Data instance "Example" class is not present here; has two property-- attributeValues & classValues
 */
